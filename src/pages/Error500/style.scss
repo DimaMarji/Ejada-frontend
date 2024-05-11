@@ -1,0 +1,19 @@
+@import "../../../src/Styles/Variables/fonts.module";
+@import "../../../src/Styles/Helpers/mixins";
+
+.general-error-container {
+  .offline-content {
+    top: 45%;
+    max-width: 90vw;
+
+    .ant-typography {
+      margin-top: 0 !important;
+    }
+  }
+}
+
+
+@include media-query(tablet-and-mobile) {
+
+}
+

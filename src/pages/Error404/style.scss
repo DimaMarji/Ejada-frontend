@@ -1,0 +1,40 @@
+@import "../../../src/Styles/Variables/fonts.module";
+@import "../../../src/Styles/Helpers/mixins";
+
+.error-page-container {
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  padding-top: 67px;
+  align-items: center;
+  height: 100%;
+  min-height: 100vh;
+
+  .error-title {
+    margin-bottom: 8px;
+  }
+
+  img {
+    min-width: 28vw;
+    height: auto;
+    margin-bottom: 34px;
+    max-width: 75vw;
+  }
+
+  button {
+    margin-top: 25px;
+
+  }
+}
+
+@include media-query(tablet-and-mobile) {
+  .error-page-container {
+
+    button.ant-btn {
+      width: 90% !important;
+      margin-inline: auto;
+      margin-top: 34px;
+    }
+  }
+
+}

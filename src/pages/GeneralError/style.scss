@@ -1,0 +1,68 @@
+@import "../../Styles/Helpers/mixins";
+
+.offline-container {
+  justify-content: center;
+  display: flex;
+  height: 120vh;
+  //height: calc(130vh - 150px) !important;
+  overflow: hidden !important;
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: -20vh;
+  //background-color: red;
+  //padding-top: 20vh;
+
+
+}
+
+
+.offline-content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: -1;
+
+}
+
+.reload-button-container {
+  text-align: center;
+  position: absolute;
+  //top: 60%;
+  bottom: 24%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+}
+
+.offline-container canvas {
+  width: 100vw !important;
+  cursor: grab;
+}
+
+.ant-btn.reload-button {
+  margin-top: 32px !important;
+
+}
+
+@include media-query(tablet) {
+  .offline-content {
+    width: 340px !important;
+  }
+}
+
+@include media-query(mobile) {
+  .offline-content {
+    width: 325px !important;
+  }
+  .subTitle {
+    font-size: 20px !important;
+    font-family: Nordeco-Regular !important;
+  }
+}
+

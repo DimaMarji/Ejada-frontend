@@ -1,0 +1,72 @@
+
+
+
+
+//large-Desktop or laptop ,tablet ,tablet-and-mobile ,mobile ,tablet-or-mobile , is-not-mobile
+@mixin media-query($size) {
+  @if $size == large-Desktop {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  } @else if $size == laptop {
+    @media (max-width: 1439px) and (min-width: 992px) {
+      @content;
+    }
+    // TODO
+  } @else if $size == tablet {
+    @media (max-width: 991px) and (min-width: 576px) {
+      @content;
+    }
+  } @else if $size == tablet-and-mobile {
+    @media (max-width: 991px) {
+      @content;
+    }
+  } @else if $size == mobile {
+    @media (max-width: 575px) {
+      @content;
+    }
+  } @else if $size == tablet-or-mobile {
+    @media (max-width: 991px) {
+      @content;
+    }
+  } @else if $size == is-not-mobile {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+}
+
+/* end mixin for media queries */
+
+
+@mixin fullWidthSection {
+
+  margin-left: calc(((100vw - 1200px) / 2) * -1) !important;
+  margin-right: 0 !important;
+  padding-left: calc((100vw - 1200px) / 2);
+  padding-right: calc((100vw - 1200px) / 2);
+  width: 100vw;
+
+  @include media-query(laptop) {
+    margin-left: -10% !important;
+    padding-left: 8% !important;
+    padding-right: 8% !important;
+    width: 100vw;
+  }
+
+  @include media-query(tablet) {
+    margin-left: -13% !important;
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+    width: 100vw;
+  }
+
+
+  @include media-query(mobile) {
+    margin-left: -7% !important;
+    padding-left: 6% !important;
+    padding-right: 6% !important;
+    width: 100vw;
+  }
+}
+
