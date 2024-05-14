@@ -2,11 +2,8 @@ import type {AppProps} from 'next/app'
 import './App.scss';
 import "antd/dist/antd.min.css";
 import React from "react";
-import "../Layouts/SharedLayout/style.scss"
 import GeneralPages from './_generalPages';
 import SystemPages from './_systemPages';
-import {useHiddenInspect} from '../Hooks/window/hiddenInspect/use-hidden-inspect';
-
 
 export default function App(appProps: AppProps) {
     let {pageProps} = appProps;
@@ -20,17 +17,17 @@ export default function App(appProps: AppProps) {
     return <div className="App">
         {
             <>
-                {isSystemPages ?
+                {/* {isSystemPages ?
                     (
                         <>
                             <SystemPages {...appProps}/>
                         </>
                     ) :
-                    (
+                    ( */}
                         <>
                             <GeneralPages {...appProps} />
                         </>
-                    )}
+                    {/* )} */}
             </>
         }
     </div>
